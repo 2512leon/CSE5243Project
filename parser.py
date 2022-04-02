@@ -1,38 +1,51 @@
 from typing import OrderedDict
 from bs4 import BeautifulSoup
 import collections
+from collections import Counter
+import os
 
-fileNames = []
-topics = []
-places = []
+#function to merge dictionaries, add the counts for dictionaries that contain identical keys
+def mergeDictionaries(dict1, dict2):
+    mergedDict = Counter(dict1) + Counter(dict2)
+
+placesDictionary = {}
+topicsDictionary = {}
 
 placesList = []
 topicsList = []
-# for file in os.listdir("/data"):
-# if file.endswith(".sgm"):
-# filename = os.path.join("data", file)
-f = open("reut2-000.sgm", 'r')
-dataRead = f.read()
 
-soup = BeautifulSoup(dataRead, 'html.parser')
-places = soup.findAll('places')
-topics = soup.findAll('topics')
+for file in os.listdir("/data"):
+    # For each .sgm file in the /data directory, read the contents
+    if file.endswith(".sgm"):
+        currentFile = os.path.join("data", file)
+        input = open("currentFile", 'r')
+        dataRead = input.read()
 
-for places in soup.find_all('places'):
-    if len(places.text) == 0:
-        placesList.append('{}')
-    for place in places.find_all('d'):
-        placesList.append(place.text)
+    # Setup the soup for the current file
+    soup = BeautifulSoup(dataRead, 'html.parser')
+    places = soup.findAll('places')
+    topics = soup.findAll('topics')
 
-for topics in soup.find_all('topics'):
-    if len(topics.text) == 0:
-        topicsList.append('{}')
-    for topic in topics.find_all('d'):
-        topicsList.append(topic.text)
+    for places in soup.find_all('places'):
+        if len(places.text) == 0:
+            # Handle the empty places tags
+            placesList.append('{}')
+        for place in places.find_all('d'):
+            placesList.append(place.text)
 
-# list comprehension to convert lists into dictionaries with counts
-placesDictionary = {place:placesList.count(place) for place in placesList} # yay list comprehension
-topicsDictionary = {topic:topicsList.count(topic) for topic in topicsList}
+    for topics in soup.find_all('topics'):
+        if len(topics.text) == 0:
+            # Handle the empty topics tags
+            topicsList.append('{}')
+        for topic in topics.find_all('d'):
+            topicsList.append(topic.text)
+
+    # list comprehension to convert lists into dictionaries with counts
+    currPlacesDictionary = {place:placesList.count(place) for place in placesList} # yay list comprehension
+    currTopicsDictionary = {topic:topicsList.count(topic) for topic in topicsList}
+
+    placesDictionary = mergeDictionaries(placesDictionary, currPlacesDictionary)
+    topicsDictionary = mergeDictionaries(placesDictionary, currTopicsDictionary)
 
 # for sorting the dictionaries and retaining some form of order since python dicts are unordered
 orderedPlaces = OrderedDict(sorted(placesDictionary.items()))
