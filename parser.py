@@ -4,15 +4,12 @@ import collections
 from collections import Counter
 import os
 
-#function to merge dictionaries, add the counts for dictionaries that contain identical keys
+# Function to merge dictionaries, add the counts for dictionaries that contain identical keys
 def mergeDictionaries(dict1, dict2):
     mergedDict = Counter(dict1) + Counter(dict2)
 
 placesDictionary = {}
 topicsDictionary = {}
-
-placesList = []
-topicsList = []
 
 for file in os.listdir("/data"):
     # For each .sgm file in the /data directory, read the contents
@@ -25,6 +22,9 @@ for file in os.listdir("/data"):
     soup = BeautifulSoup(dataRead, 'html.parser')
     places = soup.findAll('places')
     topics = soup.findAll('topics')
+
+    placesList = []
+    topicsList = []
 
     for places in soup.find_all('places'):
         if len(places.text) == 0:
@@ -40,14 +40,14 @@ for file in os.listdir("/data"):
         for topic in topics.find_all('d'):
             topicsList.append(topic.text)
 
-    # list comprehension to convert lists into dictionaries with counts
+    # List comprehension to convert lists into dictionaries with counts
     currPlacesDictionary = {place:placesList.count(place) for place in placesList} # yay list comprehension
     currTopicsDictionary = {topic:topicsList.count(topic) for topic in topicsList}
 
     placesDictionary = mergeDictionaries(placesDictionary, currPlacesDictionary)
     topicsDictionary = mergeDictionaries(placesDictionary, currTopicsDictionary)
 
-# for sorting the dictionaries and retaining some form of order since python dicts are unordered
+# For sorting the dictionaries and retaining some form of order since python dicts are unordered
 orderedPlaces = OrderedDict(sorted(placesDictionary.items()))
 orderedTopics = OrderedDict(sorted(topicsDictionary.items()))
 
