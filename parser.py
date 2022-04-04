@@ -4,19 +4,14 @@ import collections
 from collections import Counter
 import os
 
-# Function to merge dictionaries, add the counts for dictionaries that contain identical keys
-def mergeDictionaries(dict1, dict2):
-    mergedDict = Counter(dict1) + Counter(dict2)
-
 placesDictionary = {}
 topicsDictionary = {}
 
-for file in os.listdir("/data"):
+for file in os.listdir("./data"):
     # For each .sgm file in the /data directory, read the contents
-    if file.endswith(".sgm"):
-        currentFile = os.path.join("data", file)
-        input = open("currentFile", 'r')
-        dataRead = input.read()
+    currentFile = os.path.join("./data/", file)
+    input = open(currentFile, 'r')
+    dataRead = input.read()
 
     # Setup the soup for the current file
     soup = BeautifulSoup(dataRead, 'html.parser')
@@ -44,8 +39,8 @@ for file in os.listdir("/data"):
     currPlacesDictionary = {place:placesList.count(place) for place in placesList} # yay list comprehension
     currTopicsDictionary = {topic:topicsList.count(topic) for topic in topicsList}
 
-    placesDictionary = mergeDictionaries(placesDictionary, currPlacesDictionary)
-    topicsDictionary = mergeDictionaries(placesDictionary, currTopicsDictionary)
+    placesDictionary = Counter(placesDictionary) + Counter(currPlacesDictionary)
+    topicsDictionary = Counter(topicsDictionary) + Counter(currTopicsDictionary)
 
 # For sorting the dictionaries and retaining some form of order since python dicts are unordered
 orderedPlaces = OrderedDict(sorted(placesDictionary.items()))

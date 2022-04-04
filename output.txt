@@ -1,0 +1,811 @@
+Places Dictionary:
+Sequence Number: 1
+Place: afghanistan
+Frequency: 3
+Sequence Number: 2
+Place: algeria
+Frequency: 35
+Sequence Number: 3
+Place: angola
+Frequency: 2
+Sequence Number: 4
+Place: antigua
+Frequency: 1
+Sequence Number: 5
+Place: argentina
+Frequency: 90
+Sequence Number: 6
+Place: aruba
+Frequency: 1
+Sequence Number: 7
+Place: australia
+Frequency: 270
+Sequence Number: 8
+Place: austria
+Frequency: 27
+Sequence Number: 9
+Place: bahamas
+Frequency: 1
+Sequence Number: 10
+Place: bahrain
+Frequency: 46
+Sequence Number: 11
+Place: bangladesh
+Frequency: 34
+Sequence Number: 12
+Place: barbados
+Frequency: 3
+Sequence Number: 13
+Place: belgium
+Frequency: 214
+Sequence Number: 14
+Place: benin
+Frequency: 1
+Sequence Number: 15
+Place: bermuda
+Frequency: 4
+Sequence Number: 16
+Place: bhutan
+Frequency: 1
+Sequence Number: 17
+Place: bolivia
+Frequency: 23
+Sequence Number: 18
+Place: botswana
+Frequency: 3
+Sequence Number: 19
+Place: brazil
+Frequency: 332
+Sequence Number: 20
+Place: brunei
+Frequency: 6
+Sequence Number: 21
+Place: bulgaria
+Frequency: 3
+Sequence Number: 22
+Place: burkina-faso
+Frequency: 1
+Sequence Number: 23
+Place: burma
+Frequency: 2
+Sequence Number: 24
+Place: cameroon
+Frequency: 4
+Sequence Number: 25
+Place: canada
+Frequency: 1104
+Sequence Number: 26
+Place: cayman-islands
+Frequency: 2
+Sequence Number: 27
+Place: chad
+Frequency: 8
+Sequence Number: 28
+Place: chile
+Frequency: 17
+Sequence Number: 29
+Place: china
+Frequency: 223
+Sequence Number: 30
+Place: colombia
+Frequency: 53
+Sequence Number: 31
+Place: congo
+Frequency: 2
+Sequence Number: 32
+Place: costa-rica
+Frequency: 19
+Sequence Number: 33
+Place: cuba
+Frequency: 18
+Sequence Number: 34
+Place: cyprus
+Frequency: 20
+Sequence Number: 35
+Place: czechoslovakia
+Frequency: 5
+Sequence Number: 36
+Place: denmark
+Frequency: 56
+Sequence Number: 37
+Place: djibouti
+Frequency: 2
+Sequence Number: 38
+Place: dominican-republic
+Frequency: 8
+Sequence Number: 39
+Place: east-germany
+Frequency: 4
+Sequence Number: 40
+Place: ecuador
+Frequency: 72
+Sequence Number: 41
+Place: egypt
+Frequency: 49
+Sequence Number: 42
+Place: el-salvador
+Frequency: 11
+Sequence Number: 43
+Place: ethiopia
+Frequency: 5
+Sequence Number: 44
+Place: fiji
+Frequency: 3
+Sequence Number: 45
+Place: finland
+Frequency: 40
+Sequence Number: 46
+Place: france
+Frequency: 469
+Sequence Number: 47
+Place: gabon
+Frequency: 5
+Sequence Number: 48
+Place: ghana
+Frequency: 15
+Sequence Number: 49
+Place: greece
+Frequency: 36
+Sequence Number: 50
+Place: guam
+Frequency: 2
+Sequence Number: 51
+Place: guatemala
+Frequency: 9
+Sequence Number: 52
+Place: guinea
+Frequency: 1
+Sequence Number: 53
+Place: guyana
+Frequency: 2
+Sequence Number: 54
+Place: haiti
+Frequency: 8
+Sequence Number: 55
+Place: honduras
+Frequency: 12
+Sequence Number: 56
+Place: hong-kong
+Frequency: 142
+Sequence Number: 57
+Place: hungary
+Frequency: 19
+Sequence Number: 58
+Place: iceland
+Frequency: 3
+Sequence Number: 59
+Place: india
+Frequency: 82
+Sequence Number: 60
+Place: indonesia
+Frequency: 99
+Sequence Number: 61
+Place: iran
+Frequency: 179
+Sequence Number: 62
+Place: iraq
+Frequency: 90
+Sequence Number: 63
+Place: ireland
+Frequency: 18
+Sequence Number: 64
+Place: israel
+Frequency: 27
+Sequence Number: 65
+Place: italy
+Frequency: 170
+Sequence Number: 66
+Place: ivory-coast
+Frequency: 20
+Sequence Number: 67
+Place: jamaica
+Frequency: 13
+Sequence Number: 68
+Place: japan
+Frequency: 1138
+Sequence Number: 69
+Place: jordan
+Frequency: 17
+Sequence Number: 70
+Place: kampuchea
+Frequency: 2
+Sequence Number: 71
+Place: kenya
+Frequency: 19
+Sequence Number: 72
+Place: kuwait
+Frequency: 53
+Sequence Number: 73
+Place: lebanon
+Frequency: 19
+Sequence Number: 74
+Place: lesotho
+Frequency: 1
+Sequence Number: 75
+Place: liberia
+Frequency: 3
+Sequence Number: 76
+Place: libya
+Frequency: 16
+Sequence Number: 77
+Place: liechtenstein
+Frequency: 1
+Sequence Number: 78
+Place: luxembourg
+Frequency: 49
+Sequence Number: 79
+Place: madagascar
+Frequency: 5
+Sequence Number: 80
+Place: malawi
+Frequency: 4
+Sequence Number: 81
+Place: malaysia
+Frequency: 78
+Sequence Number: 82
+Place: malta
+Frequency: 1
+Sequence Number: 83
+Place: mauritania
+Frequency: 1
+Sequence Number: 84
+Place: mauritius
+Frequency: 5
+Sequence Number: 85
+Place: mexico
+Frequency: 81
+Sequence Number: 86
+Place: morocco
+Frequency: 18
+Sequence Number: 87
+Place: mozambique
+Frequency: 5
+Sequence Number: 88
+Place: namibia
+Frequency: 2
+Sequence Number: 89
+Place: nepal
+Frequency: 3
+Sequence Number: 90
+Place: netherlands
+Frequency: 196
+Sequence Number: 91
+Place: new-zealand
+Frequency: 112
+Sequence Number: 92
+Place: nicaragua
+Frequency: 28
+Sequence Number: 93
+Place: niger
+Frequency: 2
+Sequence Number: 94
+Place: nigeria
+Frequency: 37
+Sequence Number: 95
+Place: north-korea
+Frequency: 7
+Sequence Number: 96
+Place: norway
+Frequency: 44
+Sequence Number: 97
+Place: oman
+Frequency: 6
+Sequence Number: 98
+Place: pakistan
+Frequency: 39
+Sequence Number: 99
+Place: panama
+Frequency: 12
+Sequence Number: 100
+Place: papua-new-guinea
+Frequency: 7
+Sequence Number: 101
+Place: paraguay
+Frequency: 2
+Sequence Number: 102
+Place: peru
+Frequency: 45
+Sequence Number: 103
+Place: philippines
+Frequency: 136
+Sequence Number: 104
+Place: poland
+Frequency: 18
+Sequence Number: 105
+Place: portugal
+Frequency: 38
+Sequence Number: 106
+Place: qatar
+Frequency: 17
+Sequence Number: 107
+Place: romania
+Frequency: 5
+Sequence Number: 108
+Place: rwanda
+Frequency: 2
+Sequence Number: 109
+Place: saudi-arabia
+Frequency: 87
+Sequence Number: 110
+Place: senegal
+Frequency: 5
+Sequence Number: 111
+Place: sierra-leone
+Frequency: 3
+Sequence Number: 112
+Place: singapore
+Frequency: 71
+Sequence Number: 113
+Place: somalia
+Frequency: 3
+Sequence Number: 114
+Place: south-africa
+Frequency: 113
+Sequence Number: 115
+Place: south-korea
+Frequency: 111
+Sequence Number: 116
+Place: spain
+Frequency: 115
+Sequence Number: 117
+Place: sri-lanka
+Frequency: 33
+Sequence Number: 118
+Place: sudan
+Frequency: 9
+Sequence Number: 119
+Place: suriname
+Frequency: 5
+Sequence Number: 120
+Place: swaziland
+Frequency: 1
+Sequence Number: 121
+Place: sweden
+Frequency: 112
+Sequence Number: 122
+Place: switzerland
+Frequency: 214
+Sequence Number: 123
+Place: syria
+Frequency: 10
+Sequence Number: 124
+Place: taiwan
+Frequency: 128
+Sequence Number: 125
+Place: tanzania
+Frequency: 16
+Sequence Number: 126
+Place: thailand
+Frequency: 81
+Sequence Number: 127
+Place: togo
+Frequency: 3
+Sequence Number: 128
+Place: trinidad-tobago
+Frequency: 4
+Sequence Number: 129
+Place: tunisia
+Frequency: 10
+Sequence Number: 130
+Place: turkey
+Frequency: 64
+Sequence Number: 131
+Place: uae
+Frequency: 42
+Sequence Number: 132
+Place: uganda
+Frequency: 17
+Sequence Number: 133
+Place: uk
+Frequency: 1489
+Sequence Number: 134
+Place: uruguay
+Frequency: 5
+Sequence Number: 135
+Place: us-virgin-islands
+Frequency: 2
+Sequence Number: 136
+Place: usa
+Frequency: 12542
+Sequence Number: 137
+Place: ussr
+Frequency: 216
+Sequence Number: 138
+Place: vanuatu
+Frequency: 1
+Sequence Number: 139
+Place: venezuela
+Frequency: 75
+Sequence Number: 140
+Place: vietnam
+Frequency: 8
+Sequence Number: 141
+Place: west-germany
+Frequency: 567
+Sequence Number: 142
+Place: yemen-arab-republic
+Frequency: 8
+Sequence Number: 143
+Place: yemen-demo-republic
+Frequency: 3
+Sequence Number: 144
+Place: yugoslavia
+Frequency: 47
+Sequence Number: 145
+Place: zaire
+Frequency: 9
+Sequence Number: 146
+Place: zambia
+Frequency: 23
+Sequence Number: 147
+Place: zimbabwe
+Frequency: 16
+Sequence Number: 148
+Place: {}
+Frequency: 2780
+
+
+Topics Dictionary: 
+Sequence Number: 1
+Topic: acq
+Frequency: 2448
+Sequence Number: 2
+Topic: alum
+Frequency: 63
+Sequence Number: 3
+Topic: austdlr
+Frequency: 4
+Sequence Number: 4
+Topic: barley
+Frequency: 54
+Sequence Number: 5
+Topic: bfr
+Frequency: 1
+Sequence Number: 6
+Topic: bop
+Frequency: 116
+Sequence Number: 7
+Topic: can
+Frequency: 3
+Sequence Number: 8
+Topic: carcass
+Frequency: 75
+Sequence Number: 9
+Topic: castor-oil
+Frequency: 2
+Sequence Number: 10
+Topic: castorseed
+Frequency: 1
+Sequence Number: 11
+Topic: citruspulp
+Frequency: 1
+Sequence Number: 12
+Topic: cocoa
+Frequency: 76
+Sequence Number: 13
+Topic: coconut
+Frequency: 6
+Sequence Number: 14
+Topic: coconut-oil
+Frequency: 7
+Sequence Number: 15
+Topic: coffee
+Frequency: 145
+Sequence Number: 16
+Topic: copper
+Frequency: 78
+Sequence Number: 17
+Topic: copra-cake
+Frequency: 3
+Sequence Number: 18
+Topic: corn
+Frequency: 254
+Sequence Number: 19
+Topic: corn-oil
+Frequency: 1
+Sequence Number: 20
+Topic: cornglutenfeed
+Frequency: 2
+Sequence Number: 21
+Topic: cotton
+Frequency: 63
+Sequence Number: 22
+Topic: cotton-oil
+Frequency: 3
+Sequence Number: 23
+Topic: cottonseed
+Frequency: 1
+Sequence Number: 24
+Topic: cpi
+Frequency: 112
+Sequence Number: 25
+Topic: cpu
+Frequency: 4
+Sequence Number: 26
+Topic: crude
+Frequency: 634
+Sequence Number: 27
+Topic: cruzado
+Frequency: 1
+Sequence Number: 28
+Topic: dfl
+Frequency: 3
+Sequence Number: 29
+Topic: dkr
+Frequency: 1
+Sequence Number: 30
+Topic: dlr
+Frequency: 217
+Sequence Number: 31
+Topic: dmk
+Frequency: 15
+Sequence Number: 32
+Topic: earn
+Frequency: 3987
+Sequence Number: 33
+Topic: f-cattle
+Frequency: 3
+Sequence Number: 34
+Topic: fishmeal
+Frequency: 2
+Sequence Number: 35
+Topic: fuel
+Frequency: 28
+Sequence Number: 36
+Topic: gas
+Frequency: 65
+Sequence Number: 37
+Topic: gnp
+Frequency: 163
+Sequence Number: 38
+Topic: gold
+Frequency: 135
+Sequence Number: 39
+Topic: grain
+Frequency: 628
+Sequence Number: 40
+Topic: groundnut
+Frequency: 10
+Sequence Number: 41
+Topic: groundnut-oil
+Frequency: 2
+Sequence Number: 42
+Topic: heat
+Frequency: 25
+Sequence Number: 43
+Topic: hk
+Frequency: 1
+Sequence Number: 44
+Topic: hog
+Frequency: 27
+Sequence Number: 45
+Topic: housing
+Frequency: 21
+Sequence Number: 46
+Topic: income
+Frequency: 18
+Sequence Number: 47
+Topic: instal-debt
+Frequency: 7
+Sequence Number: 48
+Topic: interest
+Frequency: 513
+Sequence Number: 49
+Topic: inventories
+Frequency: 7
+Sequence Number: 50
+Topic: ipi
+Frequency: 65
+Sequence Number: 51
+Topic: iron-steel
+Frequency: 67
+Sequence Number: 52
+Topic: jet
+Frequency: 8
+Sequence Number: 53
+Topic: jobs
+Frequency: 76
+Sequence Number: 54
+Topic: l-cattle
+Frequency: 9
+Sequence Number: 55
+Topic: lead
+Frequency: 35
+Sequence Number: 56
+Topic: lei
+Frequency: 17
+Sequence Number: 57
+Topic: lin-meal
+Frequency: 1
+Sequence Number: 58
+Topic: lin-oil
+Frequency: 2
+Sequence Number: 59
+Topic: linseed
+Frequency: 2
+Sequence Number: 60
+Topic: lit
+Frequency: 3
+Sequence Number: 61
+Topic: livestock
+Frequency: 114
+Sequence Number: 62
+Topic: lumber
+Frequency: 17
+Sequence Number: 63
+Topic: meal-feed
+Frequency: 51
+Sequence Number: 64
+Topic: money-fx
+Frequency: 801
+Sequence Number: 65
+Topic: money-supply
+Frequency: 190
+Sequence Number: 66
+Topic: naphtha
+Frequency: 7
+Sequence Number: 67
+Topic: nat-gas
+Frequency: 130
+Sequence Number: 68
+Topic: nickel
+Frequency: 11
+Sequence Number: 69
+Topic: nkr
+Frequency: 3
+Sequence Number: 70
+Topic: nzdlr
+Frequency: 4
+Sequence Number: 71
+Topic: oat
+Frequency: 14
+Sequence Number: 72
+Topic: oilseed
+Frequency: 192
+Sequence Number: 73
+Topic: orange
+Frequency: 29
+Sequence Number: 74
+Topic: palladium
+Frequency: 3
+Sequence Number: 75
+Topic: palm-oil
+Frequency: 43
+Sequence Number: 76
+Topic: palmkernel
+Frequency: 3
+Sequence Number: 77
+Topic: peseta
+Frequency: 1
+Sequence Number: 78
+Topic: pet-chem
+Frequency: 41
+Sequence Number: 79
+Topic: platinum
+Frequency: 12
+Sequence Number: 80
+Topic: plywood
+Frequency: 4
+Sequence Number: 81
+Topic: pork-belly
+Frequency: 4
+Sequence Number: 82
+Topic: potato
+Frequency: 6
+Sequence Number: 83
+Topic: propane
+Frequency: 6
+Sequence Number: 84
+Topic: rand
+Frequency: 3
+Sequence Number: 85
+Topic: rape-meal
+Frequency: 1
+Sequence Number: 86
+Topic: rape-oil
+Frequency: 8
+Sequence Number: 87
+Topic: rapeseed
+Frequency: 35
+Sequence Number: 88
+Topic: red-bean
+Frequency: 1
+Sequence Number: 89
+Topic: reserves
+Frequency: 84
+Sequence Number: 90
+Topic: retail
+Frequency: 27
+Sequence Number: 91
+Topic: rice
+Frequency: 67
+Sequence Number: 92
+Topic: ringgit
+Frequency: 1
+Sequence Number: 93
+Topic: rubber
+Frequency: 51
+Sequence Number: 94
+Topic: rupiah
+Frequency: 1
+Sequence Number: 95
+Topic: rye
+Frequency: 2
+Sequence Number: 96
+Topic: saudriyal
+Frequency: 3
+Sequence Number: 97
+Topic: sfr
+Frequency: 3
+Sequence Number: 98
+Topic: ship
+Frequency: 305
+Sequence Number: 99
+Topic: silver
+Frequency: 37
+Sequence Number: 100
+Topic: skr
+Frequency: 1
+Sequence Number: 101
+Topic: sorghum
+Frequency: 35
+Sequence Number: 102
+Topic: soy-meal
+Frequency: 27
+Sequence Number: 103
+Topic: soy-oil
+Frequency: 25
+Sequence Number: 104
+Topic: soybean
+Frequency: 120
+Sequence Number: 105
+Topic: stg
+Frequency: 21
+Sequence Number: 106
+Topic: strategic-metal
+Frequency: 32
+Sequence Number: 107
+Topic: sugar
+Frequency: 184
+Sequence Number: 108
+Topic: sun-meal
+Frequency: 2
+Sequence Number: 109
+Topic: sun-oil
+Frequency: 8
+Sequence Number: 110
+Topic: sunseed
+Frequency: 17
+Sequence Number: 111
+Topic: tapioca
+Frequency: 4
+Sequence Number: 112
+Topic: tea
+Frequency: 15
+Sequence Number: 113
+Topic: tin
+Frequency: 33
+Sequence Number: 114
+Topic: trade
+Frequency: 552
+Sequence Number: 115
+Topic: veg-oil
+Frequency: 137
+Sequence Number: 116
+Topic: wheat
+Frequency: 306
+Sequence Number: 117
+Topic: wool
+Frequency: 2
+Sequence Number: 118
+Topic: wpi
+Frequency: 32
+Sequence Number: 119
+Topic: yen
+Frequency: 69
+Sequence Number: 120
+Topic: zinc
+Frequency: 44
+Sequence Number: 121
+Topic: {}
+Frequency: 10211
