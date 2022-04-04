@@ -1,6 +1,5 @@
 from typing import OrderedDict
 from bs4 import BeautifulSoup
-import collections
 from collections import Counter
 import os
 
