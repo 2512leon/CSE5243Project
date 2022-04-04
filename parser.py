@@ -61,12 +61,8 @@ for k,v in orderedTopics.items():
 
 print("Places Dictionary:")
 for k,v in placesDictFinal.items():
-    print("Sequence Number:", k)
-    print("Place:",v[0])
-    print("Frequency:",v[1])
+    print("Sequence Number:", k, "| Place:", v[0], "| Frequency:", v[1])
 
 print("\n\nTopics Dictionary: ")
 for k,v in topicsDictFinal.items():
-    print("Sequence Number:", k)
-    print("Topic:",v[0])
-    print("Frequency:",v[1])
+    print("Sequence Number:", k, "| Topic:", v[0], "| Frequency:", v[1])
