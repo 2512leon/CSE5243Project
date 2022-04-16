@@ -223,6 +223,7 @@ for k,v in topicsTruthDict.items():
 X = vectorizer.fit_transform(words).toarray()
 tfidfconverter = TfidfTransformer()
 X = tfidfconverter.fit_transform(X).toarray()
+print(len(X[0]))
 X_train, X_test, y_train, y_test = train_test_split(X, placesTruth, test_size=0.2, random_state=0)
 
 X_topics = vectorizer.fit_transform(wordsForTopics).toarray()
