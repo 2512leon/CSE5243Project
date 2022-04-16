@@ -157,10 +157,10 @@ wordsForTopics = []
 for sen in range(0, len(bodyDataForTopics)):
     
     # Remove all the special characters
-    word = re.sub(r'\W', ' ', str(bodyDataForTopics[sen]))
+    # word = re.sub(r'\W', ' ', str(bodyDataForTopics[sen]))
 
     # Substituting multiple spaces with single space
-    word = re.sub(r'\s+', ' ', word, flags=re.I)
+    word = re.sub(r'\s+', ' ', str(bodyDataForTopics[sen]), flags=re.I)
 
     # Lemmatization
     word = word.split()
@@ -229,6 +229,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, placesTruth, test_size=0.
 X_topics = vectorizer.fit_transform(wordsForTopics).toarray()
 tfidfconverter_topics = TfidfTransformer()
 X_topics = tfidfconverter_topics.fit_transform(X_topics).toarray()
+print(len(X_topics[0]))
 X_train_topics, X_test_topics, y_train_topics, y_test_topics = train_test_split(X_topics, topicsTruth, test_size=0.2, random_state=0)
 
 classifier = RandomForestClassifier(n_estimators=1000, random_state=0)
