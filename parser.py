@@ -1,4 +1,5 @@
 from graphlib import TopologicalSorter
+from random import Random
 from tempfile import tempdir
 from typing import Dict, OrderedDict
 from bs4 import BeautifulSoup
@@ -19,9 +20,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.naive_bayes import MultinomialNB
+import sklearn.metrics as metrics
 
 stemmer = WordNetLemmatizer()
-vectorizer = CountVectorizer(max_features=500, min_df=5, max_df=0.7, stop_words=stopwords.words('english'))
+vectorizer = CountVectorizer(min_df=0.01, max_df=0.1, stop_words=stopwords.words('english'))
 
 
 placesDictionary = {}
@@ -116,27 +119,27 @@ for k,v in orderedTopics.items():
 
 placesTruthTemp = []
 topicsTruthTemp = []
-bodyData = []
+bodyDataForPlaces = []
+bodyDataForTopics = []
 for reuter in allReuters:
-    placesTruthTemp.append(reuter[0])
-    topicsTruthTemp.append(reuter[1])
-    bodyData.append(reuter[2])
+    if len(reuter[0]) == 1: # only grab if there is 1 truth value, if [] then ignore
+        placesTruthTemp.append(reuter[0])
+        bodyDataForPlaces.append(reuter[2])
+    if len(reuter[1]) == 1: # only grab if there is 1 truth value, if [] then ignore
+        topicsTruthTemp.append(reuter[1])
+        bodyDataForTopics.append(reuter[2])
 
 words = []
-for sen in range(0, len(bodyData)):
+# places feature vector pre-processing
+for sen in range(0, len(bodyDataForPlaces)):
     # Remove all the special characters
-    word = re.sub(r'\W', ' ', str(bodyData[sen]))
-    # remove all single characters
-    word = re.sub(r'\s+[a-zA-Z]\s+', ' ', word)
+    word = re.sub(r'\W', ' ', str(bodyDataForPlaces[sen]))
 
-    # Remove single characters from the start
-    word = re.sub(r'\^[a-zA-Z]\s+', ' ', word)
+    # Remove numbers and digits
+    word = re.sub('W*dw*',' ',word)
 
     # Substituting multiple spaces with single space
     word = re.sub(r'\s+', ' ', word, flags=re.I)
-
-    # Removing prefixed 'b'
-    word = re.sub(r'^b\s+', '', word)
 
     # Converting to Lowercase
     word = word.lower()
@@ -149,8 +152,28 @@ for sen in range(0, len(bodyData)):
 
     words.append(word)
 
+# topics feature vector pre-processing
+wordsForTopics = []
+for sen in range(0, len(bodyDataForTopics)):
+    
+    # Remove all the special characters
+    word = re.sub(r'\W', ' ', str(bodyDataForTopics[sen]))
+
+    # Substituting multiple spaces with single space
+    word = re.sub(r'\s+', ' ', word, flags=re.I)
+
+    # Lemmatization
+    word = word.split()
+
+    word = [stemmer.lemmatize(x) for x in word]
+    word = ' '.join(word)
+
+    wordsForTopics.append(word)
+
+
 i = 1
 placesTruthDict = dict()
+# creation of dictionary to assign numbers to places
 for place in placesDictionary.keys():
     if place == "{}":
         placesTruthDict["{}"] = 0
@@ -160,6 +183,7 @@ for place in placesDictionary.keys():
 
 i = 1
 topicsTruthDict = dict()
+# creation of dictionary to assign numbers to topics
 for topic in topicsDictionary.keys():
     if topic == "{}":
         topicsTruthDict["{}"] = 0
@@ -171,47 +195,59 @@ for topic in topicsDictionary.keys():
 placesTruth = []
 topicsTruth = []
 
+# create a truth vector for places based on numbers from dictionaries created above
 for entry in placesTruthTemp:
     # ['usa', 'uganda', 'poland']
     temp = 0
     for place in entry:
-        temp = placesTruthDict.get(place)
+        if temp == 0: # this will only trigger before the first entry
+            temp = placesTruthDict.get(place)
     placesTruth.append(temp)
 
+#create a truth vector for topics based on numbers from dictionaries created above
 for entry in topicsTruthTemp:
     # ['usa', 'uganda', 'poland']
-    temp = []
+    temp = 0
     for topic in entry:
-        temp.append(topicsTruthDict.get(topic))
-    if len(temp) == 0:
-        temp.append(0)
+        if temp == 0: # only triggers before first entry
+            temp = topicsTruthDict.get(topic)
     topicsTruth.append(temp)
 #print(topicsTruth)
 
-
-
-
-
-
+print("TRUTH DICTIONARIES")
+for k,v in placesTruthDict.items():
+    print("Place: " + k + " Number: " + str(v))
+for k,v in topicsTruthDict.items():
+    print("Topic: " + k + " Number: " + str(v))
+# classification time
 X = vectorizer.fit_transform(words).toarray()
 tfidfconverter = TfidfTransformer()
 X = tfidfconverter.fit_transform(X).toarray()
-#print(len(X))
-#print(len(placesTruth))
 X_train, X_test, y_train, y_test = train_test_split(X, placesTruth, test_size=0.2, random_state=0)
 
-# print(X_train[1])
-# print(y_train[1])
+X_topics = vectorizer.fit_transform(wordsForTopics).toarray()
+tfidfconverter_topics = TfidfTransformer()
+X_topics = tfidfconverter_topics.fit_transform(X_topics).toarray()
+X_train_topics, X_test_topics, y_train_topics, y_test_topics = train_test_split(X_topics, topicsTruth, test_size=0.2, random_state=0)
 
 classifier = RandomForestClassifier(n_estimators=1000, random_state=0)
 classifier.fit(X_train, y_train)
 
-y_pred = classifier.predict(X_test)
+topics_classifier = RandomForestClassifier(n_estimators=1000, random_state=0)
+topics_classifier.fit(X_train_topics, y_train_topics)
 
+y_pred = classifier.predict(X_test)
+y_pred_topics = topics_classifier.predict(X_test_topics)
+
+print("PLACES CLASSIFICATION:")
 print(confusion_matrix(y_test,y_pred))
 print(classification_report(y_test,y_pred))
 print(accuracy_score(y_test, y_pred))
 
+print("TOPICS CLASSIFICATION:")
+print(confusion_matrix(y_test_topics,y_pred_topics))
+print(classification_report(y_test_topics,y_pred_topics))
+print(accuracy_score(y_test_topics, y_pred_topics))
 
 
 
