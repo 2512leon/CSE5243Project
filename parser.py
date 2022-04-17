@@ -24,7 +24,9 @@ from sklearn.naive_bayes import MultinomialNB
 import sklearn.metrics as metrics
 
 stemmer = WordNetLemmatizer()
-vectorizer = CountVectorizer(min_df=0.01, max_df=0.1, stop_words=stopwords.words('english'))
+places_vectorizer = CountVectorizer(min_df=0.01, max_df=0.1, stop_words=stopwords.words('english'))
+topics_vectorizer = CountVectorizer(min_df=0.01, max_df=0.45, stop_words=stopwords.words('english'))
+
 
 
 placesDictionary = {}
@@ -115,6 +117,12 @@ for k,v in orderedTopics.items():
 # print("\n\nTopics Dictionary: ")
 # for k,v in topicsDictFinal.items():
 #     print("Sequence Number:", k, "| Topic:", v[0], "| Frequency:", v[1])
+
+# [[places], [topics], [body]]
+# places = ['usa', 'uganda', 'poland'] --> [1,2,3] 
+# places = []
+# places = ['usa']
+
 
 
 placesTruthTemp = []
@@ -220,13 +228,14 @@ for k,v in placesTruthDict.items():
 for k,v in topicsTruthDict.items():
     print("Topic: " + k + " Number: " + str(v))
 # classification time
-X = vectorizer.fit_transform(words).toarray()
+X = places_vectorizer.fit_transform(words).toarray()
 tfidfconverter = TfidfTransformer()
 X = tfidfconverter.fit_transform(X).toarray()
 print(len(X[0]))
 X_train, X_test, y_train, y_test = train_test_split(X, placesTruth, test_size=0.2, random_state=0)
 
-X_topics = vectorizer.fit_transform(wordsForTopics).toarray()
+
+X_topics = topics_vectorizer.fit_transform(wordsForTopics).toarray()
 tfidfconverter_topics = TfidfTransformer()
 X_topics = tfidfconverter_topics.fit_transform(X_topics).toarray()
 print(len(X_topics[0]))
